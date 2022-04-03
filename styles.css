@@ -1,0 +1,78 @@
+@import url('https://rsms.me/inter/inter.css');
+html {
+    font-family: 'Inter', sans-serif;
+}
+@supports (font-variation-settings: normal) {
+    html {
+        font-family: 'Inter var', sans-serif;
+    }
+}
+
+header, .form1{
+    display:block;
+    margin:0 auto;
+    width:500px;
+    text-align: center;
+}
+
+.w_custom{
+    color:rgba(49,130,206) ;
+}
+.w_avatar{
+    color: #dd6b20;
+}
+.form1 {
+    width:400px;
+}
+
+label {
+    display:block;
+    margin-top:20px;
+    margin-bottom:10px;
+}
+
+
+#upload{
+    width:400px;
+    color:#fff;
+    background-color:#dd6b20;
+    border-radius:6px;
+    font-weight:700;
+    border: 0;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    font-size: 15px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    vertical-align: middle;
+    height: 40px;
+    margin-top: 40px;
+}
+
+.custom-file-input::-webkit-file-upload-button {
+    color:#fff;
+    background-color:#dd6b20;
+    font-weight:700;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    font-size: 15px;
+    overflow: hidden;
+    position: relative;
+    vertical-align: middle;
+    height: 40px;
+    width: 400px;
+    border-style: solid;
+    border-color: #dd6b20;
+    border-radius: 6px;
+}
+
+
+#upload:hover,.custom-file-input::-webkit-file-upload-button:hover{
+    background-color: rgba(49,130,206);
+    border-color:rgba(49,130,206) ;
+    transition-duration: 0.6s;
+}

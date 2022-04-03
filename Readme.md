@@ -7,3 +7,6 @@ Website form:
 
 Outcome: 
 ![PersonalizedPhoto](https://user-images.githubusercontent.com/72363534/161356423-f7af89a0-3fe6-4fd1-8617-821797a5692e.png)
+
+LinkedIn Example: 
+![LinkedInExample](https://user-images.githubusercontent.com/72363534/161442342-0e8ce886-8319-448e-bef6-0d131f936a56.png)

@@ -5,6 +5,8 @@ Purpose of the site: M.academy students can create a custom avatar and proudly s
 Website form: 
 ![WebsiteForm](https://user-images.githubusercontent.com/72363534/161441782-c276b33c-dca3-42ac-9725-c9999c1f8c05.png)
 
+The form can be also seen at: https://jacobwysocki.github.io/macademy-overlay-photo/ (Upload function will not work here as Github pages does not allow to host dynamic sites).
+
 Outcome: 
 ![PersonalizedPhoto](https://user-images.githubusercontent.com/72363534/161356423-f7af89a0-3fe6-4fd1-8617-821797a5692e.png)
 

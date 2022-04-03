@@ -1,4 +1,6 @@
-Microsite that allows users to upload their photo and automatically adds an overlay using PHP function. 
+Microsite that allows users to upload their profile photo and automatically adds an overlay using PHP function. 
+
+Purpose of the site: M.academy students can create a custom avatar and proudly share their involvement in M.academy on Social Media (mainly aimed at LinkedIn).    
 
 Website form: 
 ![WebsiteForm](https://user-images.githubusercontent.com/72363534/161441782-c276b33c-dca3-42ac-9725-c9999c1f8c05.png)

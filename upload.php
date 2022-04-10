@@ -1,5 +1,39 @@
 <?php
 
+function crop_image($fileTmpName, $max_resolution){
+    $source = imagecreatefromstring(file_get_contents($fileTmpName));
+    $original_width = imagesx($source);
+    $original_height = imagesy($source);
+
+    if($original_height>$original_width) {
+        $ratio = $max_resolution / $original_width;
+        $new_width = $max_resolution;
+        $new_height = $original_height * $ratio;
+
+        $diff = $new_height - $new_width;
+        $x = 0;
+        $y = round($diff/2);
+    }else{
+        $ratio = $max_resolution /$original_height;
+        $new_height = $max_resolution;
+        $new_width = $original_width * $ratio;
+
+        $diff = $new_width - $new_height;
+        $x = round($diff/2);
+        $y = 0;
+    }
+
+    if($source){
+        $new_image =  imagecreatetruecolor(round($new_width), round($new_height));
+        imagecopyresampled($new_image, $source, 0,0,0,0, round($new_width), round($new_height), $original_width, $original_height);
+
+        $cropped_image =  imagecreatetruecolor($max_resolution, $max_resolution);
+        imagecopyresampled($cropped_image, $new_image, 0,0,$x,$y, $max_resolution, $max_resolution, $max_resolution, $max_resolution);
+
+        imagejpeg($cropped_image,$fileTmpName);
+    }
+}
+
 if(isset($_POST['submit'])) {
     $file = $_FILES['avatar'];
 
@@ -32,24 +66,15 @@ if(isset($_POST['submit'])) {
                 $newheight = 800;
 
                 if($width !== $newwidth || $height !== $newheight){
-                    // Load
-                    $thumb = imagecreatetruecolor($newwidth, $newheight);
-                    $source = imagecreatefromstring(file_get_contents($fileTmpName));
-                    // resize uploaded image to 800x800
-                    imagecopyresized($thumb, $source, 0, 0, 0, 0, $newwidth, $newheight, $width, $height);
-                    // Output
-                    imagejpeg($thumb,'resized.jpeg');
-
-                    $photo = imagecreatefromjpeg('resized.jpeg');
-                } else {
-                    $photo = imagecreatefromstring(file_get_contents($fileTmpName));
+                    crop_image($fileTmpName,800);
                 }
+                $photo = imagecreatefromstring(file_get_contents($fileTmpName));
 
                 // add overlay to the photo
                 imagecopyresized($photo, $frame, 0, 0,0, 0, $width2, $height2, $width2, $height2);
-                imagejpeg($photo,"macademyAvatar.jpg",100);
+                imagejpeg($photo,"macademyAvatar.jpeg",100);
 
-                echo "<img src='macademyAvatar.jpg'>";
+                echo "<img src='macademyAvatar.jpeg'>";
 
             } else {
                 echo "File is too big";

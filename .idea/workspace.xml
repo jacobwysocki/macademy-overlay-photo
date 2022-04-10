@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b8f496f8-51e2-4e3c-8bf4-6f18854a30b3" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/upload.php" beforeDir="false" afterPath="$PROJECT_DIR$/upload.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,6 +15,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -44,7 +53,8 @@
       <workItem from="1648895673218" duration="3861000" />
       <workItem from="1648932019812" duration="1275000" />
       <workItem from="1649002350428" duration="5925000" />
-      <workItem from="1649010791306" duration="225000" />
+      <workItem from="1649010791306" duration="526000" />
+      <workItem from="1649543142924" duration="7275000" />
     </task>
     <servers />
   </component>
